@@ -1,0 +1,56 @@
+/* Code quiz */
+
+.left {
+    float: left;
+    padding-left: 24px;
+}
+.right {
+    float: right;
+    padding-right: 34px;
+}
+#navbar {
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+}
+body {
+	font-family: 'Raleway', sans-serif, Helvetica;
+    background-color: #729dbf;
+}
+#quiz {
+    text-align: center;
+}
+#quizMain {
+    text-align: center;
+    padding: 24px;
+}
+#quizResult {
+    text-align: center;
+    font-size: 30px;
+	font-family: 'Raleway', sans-serif, Helvetica;
+	font-weight: bold;
+    padding: 18px;
+}
+h4 {
+    padding: 10px 8px 10px 8px;
+}
+a {
+    color: #000000;
+	text-decoration: underline;
+}
+a:hover {
+    color: #99ced3;
+}
+button {
+    border: none;
+    background-color: #4d6d9a;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 16px 10px 16px;
+    font-size: 17px;
+	font-family: 'Raleway', sans-serif, Helvetica;;
+    margin: 4px;
+}
+button:hover {
+    background-color: #99ced3;
+}
