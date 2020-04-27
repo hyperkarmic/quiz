@@ -7,3 +7,9 @@
 4)Logic to compare response against correct answer implemented
 
 5)Sound effects added, time reduction and point reduction implemented. Game over when either time runs out or questions answered.
+
+6)Reset game
+
+7) timer error corrected.  End game panel now removed when ‘play again clicked’
+
+8)Added input box to index.  Added high score page.  Added function to set initial score/to local storage.

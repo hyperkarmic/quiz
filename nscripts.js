@@ -1,11 +1,14 @@
 const start = document.getElementById('start');
 const questions = document.getElementById('questions');
 const final = document.getElementById('final');
-const hiscore = document.getElementById('hi-score');
+const hiscore = document.getElementById('hiscore');
+
 
 const eachQuestion = document.getElementById('question')
 const answer = document.getElementById('answers')
 const finalscore = document.getElementById('score')
+const again = document.getElementById('again')
+const setscore = document.getElementById('setscore')
 
 
 let score = 0;
@@ -72,7 +75,9 @@ function selectedAnswer (event){
 
 function iterator(){
     let cutoff = quizquestions.length - 1;
-    if (currentQindex === cutoff){gameOver()}
+    if (currentQindex === cutoff){
+        currentQindex = 0;
+        gameOver()}
     currentQindex++
     question()
 }
@@ -137,6 +142,19 @@ function incorrect(){
 
 }
 
+function reset(){
+    console.log('hello')
+    timeRemaining = 100;
+    currentQindex = 0;
+    
+    final.classList.add('d-none')
+    startquiz()
+    startTimer()
+
+
+
+}
+
 
 
 
@@ -146,6 +164,34 @@ function incorrect(){
   startButton.addEventListener('click',startquiz)
   startButton.addEventListener('click',startTimer)
   answer.addEventListener('click',iterator)
+  again.addEventListener('click',startquiz)
+  again.addEventListener('click',endScreenRemove)
+  again.addEventListener('click',startTimer)
+
+
+  function endScreenRemove(event) {
+
+    final.classList.add('d-none')
+
+
+}
+
+setscore.addEventListener('click',setScore)
+
+
+//local storage set module
+function setScore() {
+    localStorage.setItem("highscore", score);
+    localStorage.setItem("highscoreInitials", document.getElementById('initials').value);
+    console.log('done')
+    playerScore()
+    
+}
+
+function playerScore(){}
+
+
+
 
 
 
